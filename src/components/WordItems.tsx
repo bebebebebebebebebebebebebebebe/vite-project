@@ -1,6 +1,12 @@
 /* eslint-disable react/prop-types */
 
-const WordItems = (props) => {
+import { FC } from "react";
+
+type WordItemsProps = {
+  toggleOpen: () => void;
+};
+
+const WordItems: FC<WordItemsProps> = (props) => {
   const { toggleOpen } = props;
 
   const contentList = [
@@ -11,7 +17,7 @@ const WordItems = (props) => {
     { id: 5, source: 'source5', target: 'target5' },
   ];
 
-  const containerStyle = {
+  const containerStyle: React.CSSProperties = {
     width: '100%',
     height: 'auto',
     overflowY: 'auto',
@@ -27,7 +33,7 @@ const WordItems = (props) => {
 
 
 
-  const itemStyle = {
+  const itemStyle: React.CSSProperties = {
     border: '1px solid #ddd',
     borderRadius: '8px',
     padding: '12px',
@@ -38,12 +44,12 @@ const WordItems = (props) => {
     justifyContent: 'space-around',
   };
 
-  const titleStyle = {
+  const titleStyle: React.CSSProperties = {
     fontSize: '18px',
     fontWeight: 'bold',
   };
 
-  const arrowStyle = {
+  const arrowStyle: React.CSSProperties = {
     fontSize: '24px',
     fontWeight: 'bold',
     color: '#555',

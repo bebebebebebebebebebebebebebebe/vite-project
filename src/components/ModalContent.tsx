@@ -12,7 +12,7 @@ const contentList = [
 ];
 
 const ModalContent = () => {
-  const modalContainer = {
+  const modalContainer: React.CSSProperties = {
     width: '100%',
     paddingTop: '30px',
     display: 'flex',
@@ -21,7 +21,7 @@ const ModalContent = () => {
     maxHeight: '75vh',
   };
 
-  const modalHeader = {
+  const modalHeader: React.CSSProperties = {
     width: '90%',
     margin: '0 auto',
     display: 'flex',
@@ -31,18 +31,18 @@ const ModalContent = () => {
     padding: '0 30px',
   };
 
-  const ModalHeaderTitle = {
+  const ModalHeaderTitle: React.CSSProperties = {
     fontSize: '24px',
     fontWeight: 'bold',
   };
 
-  const arrowStyle = {
+  const arrowStyle: React.CSSProperties = {
     fontSize: '24px',
     fontWeight: 'bold',
     color: '#555',
   };
 
-  const itemStyle = {
+  const itemStyle: React.CSSProperties = {
     border: '1px solid #ddd',
     borderRadius: '8px',
     padding: '16px',
@@ -53,20 +53,20 @@ const ModalContent = () => {
     gap: '8px',
   };
 
-  const wordStyle = {
+  const wordStyle: React.CSSProperties = {
     fontSize: '20px',
     fontWeight: 'bold',
     marginBottom: '8px',
   };
 
-  const exampleStyle = {
+  const exampleStyle: React.CSSProperties = {
     fontSize: '16px',
     color: '#555',
     textAlign: 'left',
     wordBreak: 'break-word',
   };
 
-  const ModalBody = {
+  const ModalBody: React.CSSProperties = {
     width: '100%',
     overflowY: 'auto',
     display: 'flex',

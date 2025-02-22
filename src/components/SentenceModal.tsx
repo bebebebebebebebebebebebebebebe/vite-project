@@ -1,9 +1,16 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 
-const SentenceModal = ({ isOpen, onClose, children }) => {
+type SentenceModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+}
+
+const SentenceModal = ({ isOpen, onClose, children }: SentenceModalProps) => {
   if (!isOpen) return null;
 
-  const overlayStyle = {
+  const overlayStyle: React.CSSProperties = {
     position: 'fixed',
     top: 0,
     left: 0,
@@ -16,7 +23,7 @@ const SentenceModal = ({ isOpen, onClose, children }) => {
     zIndex: 1000,
   };
 
-  const modalStyle = {
+  const modalStyle: React.CSSProperties = {
     backgroundColor: '#fff',
     padding: '20px',
     borderRadius: '8px',
@@ -27,7 +34,7 @@ const SentenceModal = ({ isOpen, onClose, children }) => {
     overflow: 'scroll',
   };
 
-  const closeButtonStyle = {
+  const closeButtonStyle: React.CSSProperties = {
     position: 'absolute',
     top: '10px',
     right: '10px',
